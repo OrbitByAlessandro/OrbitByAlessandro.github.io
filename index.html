@@ -67,7 +67,7 @@ body::before {
 }
 
 .section h2 {
-    color: #ffb300;
+    color: #00e5ff;
     letter-spacing: 2px;
 }
 
@@ -123,6 +123,35 @@ body::before {
     width: 100%;
     height: auto;
 }
+
+.project-images {
+    display: flex;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.project-image {
+    flex: 1;
+    text-align: center;
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #1f2a44;
+    transition: 0.2s;
+}
+
+.project-image img:hover {
+    border-color: #00e5ff;
+    box-shadow: 0 0 12px rgba(0,229,255,0.35);
+}
+
+.caption {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #9fb3c8;
+}
 </style>
 </head>
 
@@ -171,8 +200,27 @@ CONTACT
 <h2>PROJECTS</h2>
 
 <div class="card">
-<h3>Radiation-Hardened Flight Computer</h3>
-<p>Fault-tolerant architecture and SEU mitigation for SmallSats operating in cis-lunar space.</p>
+<h3>"Rocky" Flight Computer PCB</h3>
+<p>My latest itteration of flight computer. For simplicity still using breakout CPU in the form of the TEENSY 4.0.</p>
+
+<div class="project-images">
+
+    <div class="project-image">
+        <img src="rocky-board.jpg" alt="Rocky PCB">
+        <div class="caption">Assembled flight computer PCB</div>
+    </div>
+
+    <div class="project-image">
+        <img src="rocky-schematic.jpg" alt="Schematic">
+        <div class="caption">Altium schematic</div>
+    </div>
+
+    <div class="project-image">
+        <img src="rocky-layout.jpg" alt="PCB Layout">
+        <div class="caption">Altium PCB layout</div>
+    </div>
+
+</div>
 </div>
 
 <div class="card">
