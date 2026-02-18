@@ -152,6 +152,29 @@ body::before {
     font-size: 13px;
     color: #9fb3c8;
 }
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 7, 13, 0.95);
+}
+
+.lightbox img {
+    display: block;
+    max-width: 90%;
+    max-height: 85%;
+    margin: auto;
+    border: 2px solid #00e5ff;
+    box-shadow: 0 0 30px rgba(0,229,255,0.5);
+    border-radius: 8px;
+    cursor: zoom-out;
+}
 </style>
 </head>
 
@@ -206,17 +229,17 @@ CONTACT
 <div class="project-images">
 
     <div class="project-image">
-        <img src="rocky-board.jpg" alt="Rocky PCB">
+        <img src="rocky-board.png" alt="Rocky PCB" onclick="openLightbox(this.src)">
         <div class="caption">Assembled flight computer PCB</div>
     </div>
 
     <div class="project-image">
-        <img src="rocky-schematic.jpg" alt="Schematic">
+        <img src="rocky-schematic.png" alt="Schematic" onclick="openLightbox(this.src)">
         <div class="caption">Altium schematic</div>
     </div>
 
     <div class="project-image">
-        <img src="rocky-layout.jpg" alt="PCB Layout">
+        <img src="rocky-layout.png" alt="PCB Layout" onclick="openLightbox(this.src)">
         <div class="caption">Altium PCB layout</div>
     </div>
 
@@ -230,5 +253,19 @@ CONTACT
 
 </section>
 
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(src) {
+    document.getElementById("lightbox").style.display = "block";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
 </body>
 </html>
