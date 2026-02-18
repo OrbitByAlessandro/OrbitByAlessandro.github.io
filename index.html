@@ -1,37 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Alessandro Sanchez — Portfolio</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 40px;
-            background: #0f172a;
-            color: white;
-        }
-        h1 { color: #38bdf8; }
-        .project {
-            background: #1e293b;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Alessandro Sanchez — Aerospace Engineer</title>
+
+<style>
+body {
+    margin: 0;
+    background: #05070d;
+    color: #e6edf3;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* Subtle grid background */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(0,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 80px;
+}
+
+.hero img {
+    width: 220px;
+    border-radius: 8px;
+    border: 2px solid #00e5ff;
+    box-shadow: 0 0 30px rgba(0,229,255,0.5);
+}
+
+.name {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.title {
+    font-size: 22px;
+    color: #00e5ff;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.pitch {
+    max-width: 520px;
+    line-height: 1.6;
+    color: #9fb3c8;
+}
+
+/* Section */
+.section {
+    padding: 60px 80px;
+}
+
+.section h2 {
+    color: #ffb300;
+    letter-spacing: 2px;
+}
+
+/* Project card */
+.card {
+    background: #0c1220;
+    border: 1px solid #1f2a44;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    border-color: #00e5ff;
+    box-shadow: 0 0 15px rgba(0,229,255,0.3);
+}
+</style>
 </head>
+
 <body>
 
-<h1>Alessandro Sanchez</h1>
-<p>Electrical & Aerospace Engineering Projects</p>
+<section class="hero">
 
-<div class="project">
-    <h2>Radiation-Hardened Flight Computer</h2>
-    <p>Simulation and SEU mitigation for SmallSats in cis-lunar orbit.</p>
+<img src="yourphoto.jpg" alt="Alessandro Sanchez">
+
+<div>
+<div class="name">ALESSANDRO SANCHEZ</div>
+<div class="title">Aerospace Engineer</div>
+
+<div class="pitch">
+Aerospace engineer focused on flight systems, embedded avionics,
+and radiation-tolerant computing for space applications. Experienced
+in rocket avionics design, SEU fault modeling, and spacecraft-class
+electronics development.
+</div>
 </div>
 
-<div class="project">
-    <h2>Custom Rocket Avionics</h2>
-    <p>Designed PCB for flight data acquisition and recovery deployment.</p>
+</section>
+
+<section class="section">
+<h2>PROJECTS</h2>
+
+<div class="card">
+<h3>Radiation-Hardened Flight Computer</h3>
+<p>Fault-tolerant architecture and SEU mitigation for SmallSats operating in cis-lunar space.</p>
 </div>
+
+<div class="card">
+<h3>Custom Rocket Avionics System</h3>
+<p>Designed PCB flight computer for data acquisition, deployment control, and telemetry.</p>
+</div>
+
+</section>
 
 </body>
 </html>
