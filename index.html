@@ -35,7 +35,9 @@ body::before {
 
 .hero img {
     width: 220px;
-    border-radius: 8px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
     border: 2px solid #00e5ff;
     box-shadow: 0 0 30px rgba(0,229,255,0.5);
 }
@@ -83,6 +85,30 @@ body::before {
     border-color: #00e5ff;
     box-shadow: 0 0 15px rgba(0,229,255,0.3);
 }
+
+.links {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.link-box {
+    padding: 14px 22px;
+    background: #0c1220;
+    border: 1px solid #1f2a44;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #e6edf3;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+.link-box:hover {
+    border-color: #00e5ff;
+    box-shadow: 0 0 12px rgba(0,229,255,0.4);
+    color: #00e5ff;
+}
 </style>
 </head>
 
@@ -102,6 +128,22 @@ studying Aerospace engineering. I'm passionate about building rockets
 and all the sub-systems of engineering that go into it, like PCB 
 design, 3D modeling, flight simulations, and more. Here is where I share
 all of the cool things I get up to in that pursuit. 
+</div>
+
+<div class="links">
+
+<a class="link-box" href="https://www.linkedin.com/in/alessandro-sanchez-7800152b1" target="_blank">
+LINKEDIN
+</a>
+
+<a class="link-box" href="resume.pdf" target="_blank">
+RESUME
+</a>
+
+<a class="link-box" href="mailto:alexcsanchez2@gmail.com">
+CONTACT
+</a>
+
 </div>
 </div>
 
